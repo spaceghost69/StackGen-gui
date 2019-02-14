@@ -1,0 +1,18 @@
+.mainHeader {
+  text-align: left;
+  padding: 20px;
+  background-color: #222;
+  width: 100%;
+  top: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+       Media Queries - Smaller than 500px
+   ========================================================================== */
+@media only screen and (max-width: 500px) {
+  .mainHeader {
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "automator-ai",
+  "version": "1.0.0",
+  "description": "Front-end for AutomatorAI",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "bootstrap": "4.3.1",
+    "classnames": "2.2.6",
+    "react": "16.7.0-alpha.0 - next",
+    "react-bootstrap": "1.0.0-beta.5",
+    "react-dom": "16.7.0-alpha.0 - next",
+    "react-powerhooks": "0.0.7",
+    "react-sandpack": "1.0.0",
+    "react-scripts": "2.0.3",
+    "react-social-icons": "4.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
