@@ -57,6 +57,7 @@ function FieldMapper() {
             <DragItem id={todo.id} data={todo} key={todo.id} />
           ))}
       </DropItem>
+
       <DropItem
         heading="Mapped"
         onDrop={id => {

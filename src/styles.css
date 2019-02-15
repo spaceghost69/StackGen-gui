@@ -36,6 +36,12 @@
   background: aqua;
 }
 
+.row {
+  display: flex;
+  margin: 10px;
+  padding: 5px;
+  flex-wrap: nowrap;
+}
 .box {
   display: flex;
   width: 100%;

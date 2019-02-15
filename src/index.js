@@ -44,9 +44,6 @@ function App() {
             <br />
             <br />
             <br />
-            <Button variant="primary" size="sm">
-              Create New StackGen API
-            </Button>
             <StackGenManager />
           </Tab>
 
@@ -54,19 +51,44 @@ function App() {
             <br />
             <br />
             <br />
-            <Card style={({ backgroundColor: "black" }, { width: "18rem" })}>
-              <Card.Img
-                variant="bottom"
-                src="https://uploads.codesandbox.io/uploads/user/43c839be-4fb4-4287-8d5c-fe4126a728b4/c0ob-BIG.png"
-              />
-              <Card.Body>
-                <Card.Title>Sheetster PRO</Card.Title>
-                <Card.Text>Coming Soon!</Card.Text>
-                <Button variant="warning">Signup for BETA</Button>
-              </Card.Body>
-            </Card>
+            <div className="row">
+              <Card style={({ backgroundColor: "black" }, { width: "18rem" })}>
+                <Card.Img
+                  variant="bottom"
+                  src="https://uploads.codesandbox.io/uploads/user/43c839be-4fb4-4287-8d5c-fe4126a728b4/c0ob-BIG.png"
+                />
+                <Card.Body>
+                  <Card.Title>Sheetster PRO</Card.Title>
+                  <Card.Text>Coming Soon!</Card.Text>
+                  <Button variant="warning">Signup for BETA</Button>
+                </Card.Body>
+              </Card>
+
+              <Card style={({ backgroundColor: "black" }, { width: "18rem" })}>
+                <Card.Img
+                  variant="bottom"
+                  src="https://uploads.codesandbox.io/uploads/user/43c839be-4fb4-4287-8d5c-fe4126a728b4/c0ob-BIG.png"
+                />
+                <Card.Body>
+                  <Card.Title>Sheetster PRO</Card.Title>
+                  <Card.Text>Coming Soon!</Card.Text>
+                  <Button variant="warning">Signup for BETA</Button>
+                </Card.Body>
+              </Card>
+
+              <Card style={({ backgroundColor: "black" }, { width: "18rem" })}>
+                <Card.Img
+                  variant="bottom"
+                  src="https://uploads.codesandbox.io/uploads/user/43c839be-4fb4-4287-8d5c-fe4126a728b4/c0ob-BIG.png"
+                />
+                <Card.Body>
+                  <Card.Title>Sheetster PRO</Card.Title>
+                  <Card.Text>Coming Soon!</Card.Text>
+                  <Button variant="warning">Signup for BETA</Button>
+                </Card.Body>
+              </Card>
+            </div>
           </Tab>
-          <Tab eventKey="Automator AI" title="Automator AI" />
         </Tabs>
       </div>
     </div>
