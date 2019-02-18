@@ -143,7 +143,6 @@ class StackGenManager extends React.Component {
                             exist).
                           </Form.Control.Feedback>
                         </Form.Group>
-
                         <Form.Group
                           as={Col}
                           md="3"
@@ -159,22 +158,77 @@ class StackGenManager extends React.Component {
                             Please provide a valid state.
                           </Form.Control.Feedback>
                         </Form.Group>
+
                         <Form.Group
                           as={Col}
                           md="3"
                           controlId="validationCustom05"
                         >
-                          <Form.Label>Zip</Form.Label>
+                          <Form.Label>DB Host URL</Form.Label>
+                          <Form.Control
+                            type="text"
+                            placeholder="dbUrl"
+                            required
+                          />
+                          <Form.Control.Feedback type="invalid">
+                            Please enter a reachable DB Host URL.
+                          </Form.Control.Feedback>
+                        </Form.Group>
+                        <Form.Group
+                          as={Col}
+                          md="3"
+                          controlId="validationCustom05"
+                        >
+                          <Form.Label>DB User Name</Form.Label>
+                          <Form.Control
+                            type="text"
+                            placeholder="dbUser"
+                            required
+                          />
+                          <Form.Control.Feedback type="invalid">
+                            Please enter a DB User Name.
+                          </Form.Control.Feedback>
+                        </Form.Group>
+                        <Form.Group
+                          as={Col}
+                          md="3"
+                          controlId="validationCustom05"
+                        >
+                          <Form.Label>DB User Password</Form.Label>
+                          <Form.Control
+                            type="text"
+                            placeholder="dbPassword"
+                            required
+                          />
+                          <Form.Control.Feedback type="invalid">
+                            Please enter a DB User Password.
+                          </Form.Control.Feedback>
+                        </Form.Group>
+                        <Form.Group
+                          as={Col}
+                          md="3"
+                          controlId="validationCustom05"
+                        >
+                          <Form.Label>DB (Schema) Name</Form.Label>
                           <Form.Control
                             type="text"
                             placeholder="Zip"
                             required
                           />
                           <Form.Control.Feedback type="invalid">
-                            Please provide a valid zip.
+                            Please provide a DB Schema.
                           </Form.Control.Feedback>
                         </Form.Group>
                       </Form.Row>
+
+                      <Form.Group>
+                        <Form.Check
+                          required
+                          label="Overwrite Existing DB Tables"
+                          feedback="If an existing table is found with the same name as a generated table, StackGen will rename the old table and create the new one."
+                        />
+                      </Form.Group>
+
                       <Form.Group>
                         <Form.Check
                           required
@@ -184,7 +238,6 @@ class StackGenManager extends React.Component {
                       </Form.Group>
                       <Button type="submit">Create New</Button>
                     </Form>
-                    <Button variant="warning">Edit</Button>
                   </Card.Body>
                 </Card>
               </div>

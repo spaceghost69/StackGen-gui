@@ -33,18 +33,18 @@ function App() {
       </MainHeader>
       <div className="tabBG">
         <Tabs defaultActiveKey="Field Mapper">
-          <Tab eventKey="home" title="Field Mapper">
-            <br />
-            <br />
-            <br />
-            <FieldMapper />
-          </Tab>
-
           <Tab eventKey="profile" title="APIs">
             <br />
             <br />
             <br />
             <StackGenManager />
+          </Tab>
+
+          <Tab eventKey="home" title="Field Mapper">
+            <br />
+            <br />
+            <br />
+            <FieldMapper />
           </Tab>
 
           <Tab eventKey="Sheetster PRO" title="Sheetster PRO">
