@@ -1,21 +1,22 @@
-import React from "react"
-import ReactDOM from "react-dom"
+import React from "react";
+import ReactDOM from "react-dom";
 
 // React-Bootstrap
-import Button from "react-bootstrap/Button"
-import ButtonToolbar from "react-bootstrap/ButtonToolbar"
-import Tab from "react-bootstrap/Tab"
-import Tabs from "react-bootstrap/Tabs"
-import Card from "react-bootstrap/Card"
-import "bootstrap/dist/css/bootstrap.css"
+import Button from "react-bootstrap/Button";
+import ButtonToolbar from "react-bootstrap/ButtonToolbar";
+import Tab from "react-bootstrap/Tab";
+import Tabs from "react-bootstrap/Tabs";
+import Card from "react-bootstrap/Card";
+import "bootstrap/dist/css/bootstrap.css";
 
 // TODO: import APIEditor from "./components/sg-api-editor";
 // import Footer from "./components/footer"
-import MainHeader from "./components/MainHeader"
-import FieldMapper from "./components/FieldMapper"
-import StackGenManager from "./components/StackGenManager"
+import MainHeader from "./components/MainHeader";
+import Events from "./components/Events";
+import FieldMapper from "./components/FieldMapper";
+import StackGenManager from "./components/StackGenManager";
 
-import "./styles.css"
+import "./styles.css";
 
 function App() {
   return (
@@ -33,7 +34,13 @@ function App() {
       </MainHeader>
       <div className="tabBG">
         <Tabs defaultActiveKey="Field Mapper">
-          <Tab eventKey="profile" title="APIs">
+          <Tab eventKey="events" title="Events">
+            <br />
+            <br />
+            <br />
+            <Events />
+          </Tab>
+          <Tab eventKey="APIs" title="APIs">
             <br />
             <br />
             <br />
@@ -92,8 +99,8 @@ function App() {
         </Tabs>
       </div>
     </div>
-  )
+  );
 }
 
-const rootElement = document.getElementById("root")
-ReactDOM.render(<App />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
