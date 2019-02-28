@@ -1,0 +1,27 @@
+.fieldMapper {
+  display: flex;
+  width: 100%;
+}
+
+.grab {
+  cursor: grab;
+}
+
+.grabbing {
+  cursor: grabbing;
+  border: 1px dashed;
+}
+.selectedEffect {
+  background: red;
+}
+
+/* ==========================================================================
+       Media Queries - Smaller than 500px
+   ========================================================================== */
+@media only screen and (max-width: 500px) {
+  .fieldMapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}

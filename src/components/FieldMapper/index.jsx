@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { Container } from "react-bootstrap"
 import "./FieldMapper.css"
 import DropItem from "../drop-item"
 import DragItem from "../drag-item"
@@ -25,7 +26,7 @@ function FieldMapper() {
   const [todoValues, setValue] = useState(todos)
 
   return (
-    <div className="box">
+    <Container className="fieldMapper">
       <DropItem
         heading="Fields"
         onDrop={id => {
@@ -73,7 +74,7 @@ function FieldMapper() {
             <DragItem id={todo.id} data={todo} key={todo.id} />
           ))}
       </DropItem>
-    </div>
+    </Container>
   )
 }
 

@@ -2,38 +2,93 @@ import React from "react"
 import ReactDOM from "react-dom"
 
 // React-Bootstrap
-import Button from "react-bootstrap/Button"
-import ButtonToolbar from "react-bootstrap/ButtonToolbar"
-import Tab from "react-bootstrap/Tab"
-import Tabs from "react-bootstrap/Tabs"
-import Card from "react-bootstrap/Card"
-import "bootstrap/dist/css/bootstrap.css"
+import {
+  ButtonToolbar,
+  Button,
+  Row,
+  Col,
+  Tabs,
+  Tab,
+  Container,
+  Card
+} from "react-bootstrap"
 
 // TODO: import APIEditor from "./components/sg-api-editor";
 // import Footer from "./components/footer"
 import MainHeader from "./components/MainHeader"
+import Charts from "./components/Charts"
 import FieldMapper from "./components/FieldMapper"
 import StackGenManager from "./components/StackGenManager"
+import Cal from "./components/FullCalendar"
+import Footer from "./components/Footer"
+import DashboardList from "./components/DashboardList"
+import HeaderBar from "./components/HeaderBar"
+import GitDeploy from "./components/GitDeploy"
+
+// STYLES
+
+// import "bootstrap/dist/css/bootstrap.css"
+// import "./css/bootstrap-cosmo.css"
+// import "./css/bootstrap-cyborg.css"
+// import "./css/bootstrap-solar.css"
+import "./css/bootstrap-slate.css"
+// import "./css/bootstrap-sketchy.css"
+//import "./css/bootstrap-darkly.css"
+//import "./css/bootstrap-flatly.css"
+//import "./css/bootstrap-materia.css"
+//import "./css/bootstrap-superhero.css "
 
 import "./styles.css"
+import "fullcalendar/dist/fullcalendar.min.css"
+import "fullcalendar-scheduler/dist/scheduler.min.css"
 
 function App() {
   return (
     <div className="App">
-      <MainHeader title="StackGen Dashboard">
-        <div className="titleFont">StackGen Dashboard</div>
-        <div className="subTitleFont">
-          edit and manage StackGen APIs and instances
-        </div>
-        <div className>
-          <Button variant="primary" size="sm">
-            logout
-          </Button>
-        </div>
-      </MainHeader>
+      <HeaderBar>StackGen Dashboard</HeaderBar>
+
       <div className="tabBG">
-        <Tabs defaultActiveKey="Field Mapper">
-          <Tab eventKey="profile" title="APIs">
+        <Tabs defaultActiveKey="dashboard">
+          <Tab eventKey="dashboard" title="Dashboard">
+            <Card className="flexRow">
+              <Card.Body>
+                <Card.Title>StackGen PRO</Card.Title>
+                <Card.Text>system nominal</Card.Text>
+                <DashboardList>Monitoring Dashboard</DashboardList>
+              </Card.Body>
+            </Card>
+
+            <Card className="flexRow">
+              <Card.Body>
+                <Card.Title>Deploy to Codesandbox.io</Card.Title>
+                <Card.Text>
+                  selected github project into Codesandbox.io
+                </Card.Text>
+                <GitDeploy />
+              </Card.Body>
+            </Card>
+
+            <Card>
+              <Card.Body>
+                <Card.Title>System Events</Card.Title>
+                <Card.Text>system scheduled event calendar</Card.Text>
+                <Cal />
+              </Card.Body>
+            </Card>
+
+            <Card>
+              <Card.Body>
+                <Card.Title>Performance</Card.Title>
+                <Card.Text>instance performance metrics</Card.Text>
+                <Row>
+                  <Col>
+                    <Charts />
+                  </Col>
+                </Row>
+              </Card.Body>
+            </Card>
+          </Tab>
+          <Tab eventKey="APIs" title="APIs">
             <br />
             <br />
             <br />
@@ -91,6 +146,7 @@ function App() {
           </Tab>
         </Tabs>
       </div>
+      <Footer />
     </div>
   )
 }
